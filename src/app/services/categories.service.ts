@@ -22,11 +22,12 @@ export class CategoriesService {
 
     return this.httpClient.get<CategoryPage>('/api/categories/' + id, {headers});
   }
+  getProductPage(id: number, page: number) {
+    const headers = new HttpHeaders()
+      .set('access-token', AccessToken.token);
 
-  getProduct() {
-    const headers = new HttpHeaders().set('access-token', AccessToken.token);
-
-    return this.httpClient.get<CategoryPage>('/api/products/', {headers});
+    return this.httpClient.get<CategoryPage>('/api/categories/' + id + '/?page=' + page, {headers});
   }
+
 
 }

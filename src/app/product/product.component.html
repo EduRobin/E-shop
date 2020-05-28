@@ -1,1 +1,70 @@
-<p>product works!</p>
+
+<div style="margin-top: 50px" class="container" *ngIf="product">
+  <h1>{{product.title}}</h1>
+  <img  style="width: 500px; height: 500px;" [src]="'http://kodytek.cz:8080/rest-api/' + product.images[0].miniaturePath" alt="Card image cap">
+
+  <div style="float: right">
+    <div class="eskere" *ngIf="product.id < 18">
+      <p><strong>Značka: </strong>{{product.parameters ['Značka']}}</p>
+      <hr>
+      <p><strong>Frekvence procesoru: </strong>{{product.parameters ['Frekvence procesoru']}}</p>
+      <hr>
+      <p><strong>Hmotnost: </strong>{{product.parameters ['Hmotnost']}}</p>
+      <hr>
+      <p><strong>Kapacita SSD: </strong>{{product.parameters ['Kapaciat SSD']}}</p>
+      <hr>
+      <p><strong>Model grafické karty: </strong>{{product.parameters ['Model grafické karty']}}</p>
+      <hr>
+      <p><strong>Model procesoru: </strong>{{product.parameters ['Model procesor']}}</p>
+      <hr>
+      <p><strong>Operační systém: </strong>{{product.parameters ['Operační systém']}}</p>
+      <hr>
+      <p><strong>Rozlišení displeje: </strong>{{product.parameters ['Rozlišení displeje']}}</p>
+      <hr>
+      <p><strong>Rozměry: </strong>{{product.parameters ['Rozměry']}}</p>
+      <hr>
+      <p><strong>Uhlopříčka displeje: </strong>{{product.parameters ['Uhlopříčka displeje']}}</p>
+      <hr>
+    </div>
+
+    <div *ngIf="product.id > 17 && product.id < 24">
+      <p><strong>Značka: </strong>{{product.parameters ['Značka']}}</p>
+      <hr>
+      <p><strong>CPU: </strong>{{product.parameters ['CPU']}}</p>
+      <hr>
+      <p><strong>GPU: </strong>{{product.parameters ['GPU']}}</p>
+      <hr>
+      <p><strong>Rozlišení displeje: </strong>{{product.parameters ['Rozslišení displeje']}}</p>
+      <hr>
+      <p><strong>Velikost displeje: </strong>{{product.parameters ['Velkost displeje']}}</p>
+      <hr>
+      <p><strong>Wifi: </strong>{{product.parameters ['Wifi']}}</p>
+      <hr>
+    </div>
+
+    <div *ngIf="product.id > 23">
+      <p><strong>Značka: </strong>{{product.parameters ['Značka']}}</p>
+      <hr>
+      <p><strong>CPU: </strong>{{product.parameters ['CPU']}}</p>
+      <hr>
+      <p><strong>GPU: </strong>{{product.parameters ['GPU']}}</p>
+      <hr>
+      <p><strong>Velikost disku: </strong>{{product.parameters ['Velikost disku']}}</p>
+      <hr>
+      <p><strong>Wifi: </strong>{{product.parameters ['Wifi']}}</p>
+      <hr>
+    </div>
+
+
+
+  </div>
+
+  <p style="margin-top: 70px" [innerHTML]="product.description">{{product.description}}</p>
+
+
+</div>
+
+
+
+
+
