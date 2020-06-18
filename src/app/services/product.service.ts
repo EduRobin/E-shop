@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import AccessToken from '../AccessToken';
 import {CategoryPage} from '../Modules/CategoryPage.model';
-import {Product} from "../Modules/Product.model";
+import {Product} from '../Modules/Product.model';
 
 @Injectable({
   providedIn: 'root'

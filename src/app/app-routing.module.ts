@@ -2,13 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {HomeComponent} from './home/home.component';
 import {CategoryComponent} from './category/category.component';
-import {ProductComponent} from "./product/product.component";
+import {ProductComponent} from './product/product.component';
+import {KosikComponent} from './kosik/kosik.component';
 
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'category', component: CategoryComponent},
   {path: 'product', component: ProductComponent},
+  {path: 'kosik', component: KosikComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'}
 ];
 

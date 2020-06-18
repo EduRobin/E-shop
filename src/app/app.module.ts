@@ -7,13 +7,15 @@ import { CategoryComponent } from './category/category.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import {HttpClientModule} from '@angular/common/http';
+import { KosikComponent } from './kosik/kosik.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    KosikComponent
   ],
   imports: [
     BrowserModule,

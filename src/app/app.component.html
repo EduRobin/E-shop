@@ -1,11 +1,17 @@
 <nav class="navbar navbar-expand-sm">
   <a class="navbar-brand" routerLink="">Eshop Robin Je Borec Eškeré</a>
   <ul class="navbar-nav mx-auto">
+
+
     <li class="nav-item " *ngFor="let cat of category">
       <a class="nav-link text-dark" routerLink="/category" (click)="clickCategory(cat.id)" [queryParams]="{id:cat.id}">{{cat.name}}</a>
     </li>
   </ul>
+  <span class="navbar-text">
+      <img src="https://img.favpng.com/24/11/9/shopping-cart-shopping-centre-online-shopping-png-favpng-NFgh22hngYaqB7Bt1wtRBiL9F.jpg" routerLink="/kosik" width="30px" height="30px">
+  </span>
 </nav>
+
 
 
 <router-outlet></router-outlet>

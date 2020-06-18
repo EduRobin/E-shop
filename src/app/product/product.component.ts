@@ -30,6 +30,10 @@ export class ProductComponent implements OnInit {
       });
   }
 
+  addDoKosiku(id: number) {
+    this.router.navigate(['/kosik'], {queryParams: {id}});
+  }
+
 
 
 }

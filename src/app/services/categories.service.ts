@@ -3,6 +3,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Category} from '../Modules/Category.model';
 import AccessToken from '../AccessToken';
 import {CategoryPage} from '../Modules/CategoryPage.model';
+import {Product} from '../Modules/Product.model';
 
 @Injectable({
   providedIn: 'root'
@@ -28,6 +29,4 @@ export class CategoriesService {
 
     return this.httpClient.get<CategoryPage>('/api/categories/' + id + '/?page=' + page, {headers});
   }
-
-
 }
